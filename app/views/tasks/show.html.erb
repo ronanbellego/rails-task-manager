@@ -2,3 +2,6 @@
 <p><%= @task.details %></p>
 <p><%= @task.completed %></p>
 <p><%= link_to "Menu", "/tasks" %></p>
+<p><%= link_to "Éditer", "/tasks/#{@task.id}/edit" %></p>
+<%= link_to "Supprimer", "/tasks/#{@task.id}",
+    data: { turbo_method: :delete, turbo_confirm: "Supprimer cette tâche ?" } %>
